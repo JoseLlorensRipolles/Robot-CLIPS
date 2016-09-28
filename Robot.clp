@@ -5,8 +5,10 @@
 
 (deffunction inicio ()
 	(reset)
+	(printout t "Max depth? " crlf)
+	(bind ?a (read))
 	(assert (Robot 1 3 0 Lamp 3 4 3 Lamp 4 2 2 Lamp 5 4 2 TotalB 7 Nivel 0 Mov init))
-	(assert (Max-depth 30))
+	(assert (Max-depth ?a))
 	)
 
 (defrule moveUp
